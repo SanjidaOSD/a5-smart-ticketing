@@ -1,54 +1,71 @@
-let seatNumber = 0;
+let countSeat = 0;
 let sub = 8;
 
 
 const allBtn = document.getElementsByClassName('btn');
+for (const btn of allBtn) {
 
-for(let btn of allBtn){
-  
-    btn.addEventListener('click', function(){
+
+    btn.addEventListener('click', function (e) {
         btn.style.backgroundColor = 'green';
-    
-        if(seatNumber === 4){
-            return alert ("You can't added other seat")
+
+        if (countSeat === 4) {
+            return alert("You can't added other seat")
         }
-            seatNumber = seatNumber + 1;
-             setInnerText('ticket-count',seatNumber);
-             
-             sub = sub - 1;
-             setInnerText('seat-count', sub);
+        countSeat = countSeat + 1;
+        setInnerText('ticket-count', countSeat);
 
-             
-const totalTicketPrice = document.getElementById('total-price')
-const totalPrice = 550 * totalTicketPrice;
-console.log(totalPrice)
-            //  const totalSelected = document.getElementById('total-selected')
-            //  const newSelected = document.createElement('p')
-            //  newElement.innerText = `seat price is : ${550}`
-            //  totalSelected.appendChild(newSelected)
+        sub = sub - 1;
+        setInnerText('seat-count', sub);
+
+        const totalSelected = document.getElementById('total-selected');
+
+        // const totalSelected = totalSelected.parentNode.childNodes[3].innerText;
+        // console.log(totalSelected.parentNode.childNodes[3]);
+
+        const selectedElement = totalSelected.parentNode.childNodes[3];
+
+        // const parentElement = document.getElementById(selectedElement);
+        // const li = document.createElement('li');
+        // const p = document.createElement('p');
+        // p.innerText = 'economy';
+        // const p2 = document.createElement('p');
+        // p2.innerText = '550';
+        // // parentElement.appendChild(li)
+        // li.append(p);
+        // li.append(p2)
+
+
+
     
+        
 
-              
-            })
-          
-           
+        // var parentElement = document.getElementById('total-selected');
+
+
+
+        var childElement = document.createElement("p");
+        childElement.textContent = "economey";
+        selectedElement.appendChild(childElement);
+
+        var childElement = document.createElement("p");
+        childElement.textContent = "550";
+        selectedElement.appendChild(childElement);
+
+
+
+
+
+    })
+
+
 }
-       
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-function setInnerText(id,value) {
+function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
-    
+
 }
