@@ -11,3 +11,8 @@
 .font-Inter{
     font-family: "Inter", sans-serif;
 }
+
+li{
+ display: flex;
+ justify-content: center;
+}

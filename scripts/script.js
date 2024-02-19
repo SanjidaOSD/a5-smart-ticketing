@@ -15,32 +15,11 @@ for (const btn of allBtn) {
         countSeat = countSeat + 1;
         setInnerText('ticket-count', countSeat);
 
+       
         sub = sub - 1;
         setInnerText('seat-count', sub);
 
-        const totalSelected = document.getElementById('total-selected');
-
-        // const totalSelected = totalSelected.parentNode.childNodes[3].innerText;
-        // console.log(totalSelected.parentNode.childNodes[3]);
-
-        const selectedElement = totalSelected.parentNode.childNodes[3];
-
-        // const parentElement = document.getElementById(selectedElement);
-        // const li = document.createElement('li');
-        // const p = document.createElement('p');
-        // p.innerText = 'economy';
-        // const p2 = document.createElement('p');
-        // p2.innerText = '550';
-        // // parentElement.appendChild(li)
-        // li.append(p);
-        // li.append(p2)
-
-
-
-    
-        
-
-        // var parentElement = document.getElementById('total-selected');
+        selectedElement = document.getElementById('total-selected');
 
 
 
@@ -53,8 +32,12 @@ for (const btn of allBtn) {
         selectedElement.appendChild(childElement);
 
 
+    
+        const totalCost = document.getElementById('total-cost').innerText;
+        console.log(typeof parseInt(totalCost));
 
-
+        const convertedTotalCost = parseInt(totalCost);
+        document.getElementById('total-cost').innerText=convertedTotalCost + 550;
 
     })
 
