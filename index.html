@@ -42,7 +42,7 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <button class="btn bg-green-200 border-green-400">
+          <button class="flex gap-3 p-2 w-24 rounded-lg bg-green-300 border-green-400">
             Bus
             <img src="images/bus-icon.png" alt="">
           </button>
@@ -57,11 +57,11 @@
       <div class="hero-content text-center text-neutral-content">
         <div class="max-w-md">
           <h1 class="mb-6 text-4xl lg:text-6xl font-bold lg:w-[650px] lg:pr-56">End-to-End Travel with<br>
-            <span class="text-green-500">Green Line Paribahan</span>
+            <span class="text-green-500">GreenLine Paribahan</span>
           </h1>
           <p class="mb-6">P Paribahan is apparently a family owned transport company specializing in transportation of
             passenger bus services since 1990.</p>
-          <button onclick="handleClick()" class="btn bg-green-500 border-green-600">Buy Tickets</button>
+          <button class="p-4 rounded-lg bg-green-500 border-green-600"><a href="#buy-ticket">Buy Tickets</a></button>
         </div>
       </div>
     </div>
@@ -97,14 +97,14 @@
 
     </div>
    <div class="text-center justify-center">
-    <button class="btn btn-outline btn-success">See All Offers</button>
+    <button class="p-4 border rounded-lg btn-outline btn-success">See All Offers</button>
    </div>
 
 
     
   </section>
 <!-- main part  -->
-<section class="font-Raleway border lg:p-36 mt-12 bg-gray-100 border-t-2 border-[#1DD100] rounded-t-[150px]">
+<section class="font-Raleway lg:p-36 mt-12 bg-gray-100 border-t-2 border-[#1DD100] rounded-t-[150px]">
 
   <h1 class="text-4xl font-bold text-center mt-8 lg:mb-4">Green Line Paribahan</h1>
   <p class="text-[16px] text-gray-500 text-center">Looking for great deals on bus tickets? We'll make it Shohoz for you! Get the lowest prices, <br> and renowned bus operators - all in one place.</p>
@@ -164,14 +164,11 @@
       <p class="text-gray-500">Per Seat</p>
     </div>
     
-
-
 </div>
- 
  
 </section>
 <!-- select your seat -->
-<section id="ticket-sale">
+<section id ="buy-ticket">
   <div class="lg:flex">
     <div class="p-8 lg:p-12 mt-6 lg:ml-32">
       
@@ -225,28 +222,29 @@
     <h1>Price</h1>
 </div>
 
-
-<div>
-
-<p>
-
-</p>
+<div id="total-selected">
+  <!-- <div class="flex justify-between">
+     <p>c2</p>
+    <p>economoy</p>
+    <p>550</p> -->
+  <!-- </div> -->
+  <!-- <div class="flex justify-between">  -->
+    <!-- <p>c2</p>
+    <p>economoy</p>
+    <p>550</p> -->
+  </div>
 
 </div>
 
-
-
-  
-  
   </div>
        <hr>
-       <div class="flex gap-52 mb-6 lg:gap-72">
+       <div id="total-price" class="flex gap-52 mb-6 lg:gap-72">
         <h1 class="font-bold">Total Price</h1>
         <p>BDT <span>1100</span></p>
        </div>
       <div class="border w-full lg:w-[470px] flex p-2 rounded-2xl">
-        <input id="" class="w-full" type="text" placeholder="Have any copupon?">
-        <button id="" class="border p-3 rounded-2xl bg-green-200">Apply</button>
+        <input id="copun-apply" class="w-full" type="text" placeholder="Have any copun ?">
+        <button id="copun-btn" class="border p-3 rounded-2xl bg-green-200">Apply</button>
       </div>
   
       <div class="flex gap-52 mt-3 mb-6 lg:gap-72">
